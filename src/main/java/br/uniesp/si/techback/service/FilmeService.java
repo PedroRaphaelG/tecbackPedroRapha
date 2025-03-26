@@ -3,7 +3,6 @@ package br.uniesp.si.techback.service;
 import br.uniesp.si.techback.model.Filme;
 import br.uniesp.si.techback.repository.FilmeRepository;
 import jakarta.persistence.EntityNotFoundException;
-import org.hibernate.sql.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

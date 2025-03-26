@@ -1,6 +1,5 @@
 package br.uniesp.si.techback.service;
 
-import br.uniesp.si.techback.model.Filme;
 import br.uniesp.si.techback.model.Usuario;
 import br.uniesp.si.techback.repository.UsuarioRepository;
 import jakarta.persistence.EntityNotFoundException;
