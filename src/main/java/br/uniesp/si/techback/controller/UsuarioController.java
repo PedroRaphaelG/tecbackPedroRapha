@@ -2,17 +2,18 @@ package br.uniesp.si.techback.controller;
 
 import br.uniesp.si.techback.model.Usuario;
 import br.uniesp.si.techback.service.UsuarioService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
-    @Autowired
-    private UsuarioService service;
+
+    private final UsuarioService service;
     @GetMapping
     public List<Usuario> listar(){
         return service.listar();

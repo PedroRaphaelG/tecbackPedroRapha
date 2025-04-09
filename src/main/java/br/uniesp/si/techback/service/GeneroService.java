@@ -3,16 +3,17 @@ package br.uniesp.si.techback.service;
 import br.uniesp.si.techback.model.Genero;
 import br.uniesp.si.techback.repository.GeneroRepository;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@RequiredArgsConstructor
 @Service
 public class GeneroService {
 
-    @Autowired
-    private GeneroRepository repository;
+
+    private final GeneroRepository repository;
     public Genero cadastrar(Genero genero){
         return repository.save(genero);
     }

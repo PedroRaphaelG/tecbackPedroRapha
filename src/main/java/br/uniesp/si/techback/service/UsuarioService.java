@@ -3,16 +3,16 @@ package br.uniesp.si.techback.service;
 import br.uniesp.si.techback.model.Usuario;
 import br.uniesp.si.techback.repository.UsuarioRepository;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@RequiredArgsConstructor
 @Service
 public class UsuarioService {
 
-    @Autowired
-    private UsuarioRepository repository;
+    private final UsuarioRepository repository;
     public Usuario cadastrar(Usuario usuario){
         return repository.save(usuario);
     }

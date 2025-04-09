@@ -3,19 +3,23 @@ package br.uniesp.si.techback.service;
 import br.uniesp.si.techback.model.Filme;
 import br.uniesp.si.techback.repository.FilmeRepository;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@RequiredArgsConstructor
 @Service
 public class FilmeService {
-    @Autowired
-    private FilmeRepository repository;
+
+    private final FilmeRepository repository;
     public Filme cadastrar(Filme filme){
         return repository.save(filme);
     }
 
+    public List<Filme> listarFilmePorTitulo(String titulo){
+        return repository.findByTitulo(titulo);
+    }
     public List<Filme> listar(){
         return repository.findAll();
     }
