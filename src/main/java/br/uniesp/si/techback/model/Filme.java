@@ -2,6 +2,7 @@ package br.uniesp.si.techback.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 
@@ -16,6 +17,6 @@ public class Filme {
 
     @NotEmpty
     private String titulo;
-
+    @NotNull
     private Integer ano_lancamento;
 }
