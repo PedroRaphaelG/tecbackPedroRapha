@@ -2,7 +2,6 @@ package br.uniesp.si.techback.controller;
 
 import br.uniesp.si.techback.model.Filme;
 import br.uniesp.si.techback.service.FilmeService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
